@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-180x180.png">
+    <title>ThingFinder | Ankuram Academy</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="glass-container">
+            <nav class="navbar">
+                <div class="logo"><a href="#">ThingFinder</a></div>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="https://ankuram.edu.np/">Home</a></li>
+                    <li class="nav-link"><a href="https://ankuram.edu.np/">Contact</a></li>
+                    <li class="nav-link"><a href="https://github.com/r-a-j-a-n">About</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="main">
+                    <h2>Hey! 👋,<br>It's your ThingFinder</h2>
+                    <p>
+                        by Ankuram Academy
+                    </p>
+                    <a href="/search"><button>Find Your Item </button></a>
+                </div>
+                <div class="image-wrapper">
+                    <img src="{{url_for('static',filename='img/image.png')}}">
+                    <div class="attrebute">
+                        <a
+                            href="https://github.com/r-a-j-a-n">
+                            by Rajan Poudel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

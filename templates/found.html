@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+ <link rel="icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://ankuram.edu.np/wp-content/uploads/2021/01/cropped-Ankuram-Logo-180x180.png">
+    <title>ThingFinder | Ankuram Academy</title>
+  <link rel='stylesheet' href='https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css'><link rel="stylesheet" href="{{url_for('static',filename='css/found.css')}}">
+
+</head>
+<body>
+<div class="ag-format-container">
+    <div class="ag-courses_box">
+        {% for result in results %}
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg">
+          
+          {% set imgpath = "Upload_Folder/" ~ result.thinggot ~ ".png" %}
+          <img src="{{ url_for('static', filename=imgpath) }}">
+          </div>
+  
+          <div class="ag-courses-item_title">
+            {{ result.thinggot }}
+          </div>
+  
+          <div class="ag-courses-item_date-box">
+            Date:
+            <span class="ag-courses-item_date">
+                {{ result.date }}
+            </span>
+          </div>
+          <div class="ag-courses-item_date-box">
+            Phone:
+            <span class="ag-courses-item_date">
+                {{ result.phone }}
+            </span>
+          </div>
+        </a>
+    </div>
+    {% endfor %}
+      </div>
+      </div>
+</body>
+</html>
